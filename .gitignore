@@ -1,0 +1,7 @@
+**/*.swp
+*.swp
+doc
+.yardoc
+coverage
+Gemfile.lock
+boolean_attributes-*.gem
