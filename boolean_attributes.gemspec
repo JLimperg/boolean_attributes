@@ -4,10 +4,10 @@ Gem::Specification.new do |s|
 
   s.summary     = "attr_accessor etc. for boolean attributes"
   s.description = <<-END
-                  This gem can be used to easily add boolean attributes to
-                  classes, using essentially the same syntax as for any
-                  other attributes. This ensures coherent handling of boolean
-                  attributes throughout a project and makes for nicer code.
+                  Add boolean attributes to your classes with a variant of the
+                  familiar attr_* syntax. This ensures coherent treatment of
+                  boolean attributes throught the project and makes your code
+                  more DRY.
                   END
   s.license     = 'MIT'
 
@@ -15,7 +15,10 @@ Gem::Specification.new do |s|
   s.email       = 'jannis.limperg@arcor.de'
   s.homepage    = 'http://rubygems.org/gems/boolean_attributes'
 
-  s.files       = Dir["lib/**/*.rb"]
+  s.files       = Dir["lib/**/*"] +
+                  Dir["spec/**/*"] +
+                  %w{Rakefile LICENSE README.md NEWS .yardopts Gemfile
+                     boolean_attributes.gemspec}
 
   s.add_development_dependency 'rspec'      , '~> 2.11'
   s.add_development_dependency 'rake'       , '~> 0.9'
