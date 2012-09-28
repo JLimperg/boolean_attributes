@@ -1,3 +1,9 @@
+Version 1.0.2
+
+* Better gem packaging. The gem now includes all files necessary for testing
+  and proper documentation generating.
+* README improvements.
+
 Version 1.0.1
 
 * Hotfix: fixes an error where BooleanAttributes could not be included
