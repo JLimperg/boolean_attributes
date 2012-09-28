@@ -86,6 +86,32 @@ I can't guarantee that special configurations etc. don't cause subtle problems.
 If you find a gem to be too much overhead for a simple library like this,
 just copy `lib/boolean_attributes.rb` to your project and `require` it.
 
+## Documenting with YARD
+
+When working with YARD, attributes created using `b_attr_*` can be documented
+most easily by using the `@!method` syntax for `#attr=` and/or `#attr?` This
+unfortunately won't make the attribute show up as an attribute, but it will
+at least document the appropriate accessor methods.
+
+Example:
+
+```ruby
+class Option
+  # @!method valid=(yes_no)
+  #   Marks the option as valid or invalid.
+  #   @param [Boolean] yes_no Whether the option is valid or not.
+  #   @return [Boolean] yes_no
+  #
+  # @!method valid?
+  #   Checks whether the option is valid or invalid.
+  #   @return [Boolean] true if valid, false otherwise.
+  b_attr_accessor :valid
+end
+```
+
+If someone feels like writing a YARD plugin, please notify me so I can link to
+it or include it in the gem.
+
 ## Contributing
 
 Please do! I'm very happy about any ideas on how to make this library or its
