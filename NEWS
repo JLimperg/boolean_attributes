@@ -1,0 +1,8 @@
+Version 1.0.1
+
+* Hotfix: fixes an error where BooleanAttributes could not be included
+  due to a syntax error in `BooleanAttributes.append_features`.
+
+Version 1.0.0
+
+* initial release

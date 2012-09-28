@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'boolean_attributes'
-  s.version     = '1.0.0'
+  s.version     = '1.0.1'
 
   s.summary     = "attr_accessor etc. for boolean attributes"
   s.description = <<-END
