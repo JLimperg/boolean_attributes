@@ -22,7 +22,7 @@ module BooleanAttributes
   #
   # @param [Class] klass A `Class`. Technically, `klass` can also be a `Module`.
   # @return [void]
-  def self.append_features(mod)
+  def self.append_features(klass)
 
     klass.module_eval <<-END
       def self.b_attr_accessor(*attrs)
